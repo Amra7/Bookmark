@@ -2,7 +2,7 @@
 
 @import helper._
 
-@main("Bookmark"){
+@main("Bookmark |"){
 	<h3>Welcome @username </h3>
 	<ul>
 	@for(bookmark <- bookmarks){
@@ -13,7 +13,7 @@
 	}
 	</ul>
 
-	@helper.form(routes.Application.addbookmark()){
+	@helper.form(routes.Application.addbookmark(), 'id->"addBookmark"){
 		@helper.inputText(inputBookmark("url"))
 		<input type = "submit"  value = "Save Bookmark" />
 	}

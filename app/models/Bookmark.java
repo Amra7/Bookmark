@@ -37,6 +37,10 @@ public class Bookmark extends Model{
 		return  find.where().eq("username", username).findList();
 	}
 	
+	public static Bookmark find(int id){
+		return find.byId(id);
+	}
+	
 	public static void delete( int id){
 		find.byId(id).delete();
 	}
